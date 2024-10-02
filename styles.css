@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1f1f1f;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 500px 360px 360px;
+  grid-template-rows: 400px 400px 300px;
+  gap: 10px;
+  width: 700px;
+  height: 430px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.box1 {
+  background-color: #f6475d;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  font-size: 100px;
+}
+
+.box2 {
+  background-color: #f8d4b0;
+  font-size: 40px;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.box3 {
+  background-color: #beb7fb;
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+  font-size: 40px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.box4 {
+  background-color: #292929;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  font-size: 55px;
+  font-family: 'Dancing Script', cursive;
+}
+
+.box5 {
+  background-color: #a3f59b;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  font-family: 'Roboto', sans-serif;
+  font-size: 55px;
+}
+
+.box6 {
+  background-color: #f8d4b0;
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+  font-size: 55px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Hover Effects */
+.box:hover {
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.container .box {
+  animation: fadeIn 1s ease-in-out;
+}
